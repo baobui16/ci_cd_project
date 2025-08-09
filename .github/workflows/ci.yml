@@ -41,7 +41,8 @@ jobs:
         env:
           PYTHONPATH: .
         run: |
-          pytest -q --maxfail=1 --disable-warnings --cov=app --cov-report=term-missing
+          pytest -q --maxfail=1 --disable-warnings
+
 
       - name: Build Docker image (no push)
         uses: docker/build-push-action@v6
