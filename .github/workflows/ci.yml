@@ -38,6 +38,8 @@ jobs:
         run: mypy app
 
       - name: Pytest
+        env:
+          PYTHONPATH: .
         run: |
           pytest -q --maxfail=1 --disable-warnings --cov=app --cov-report=term-missing
 
